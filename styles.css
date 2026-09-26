@@ -1,9 +1,9 @@
 
 :root{
-  --bg:#F4F6F8; --surface:#FFFFFF; --ink:#0E1A26; --muted:#556271; --line:#D9E0E8;
-  --accent:#1B4F8A; --accent-ink:#FFFFFF; --accent-soft:#E6EEF7;
-  --gold:#C98A1E; --gold-soft:#FBF0DC; --gold-ink:#5A3C06;
-  --hero:#123A66; --hero-ink:#F4F7FB; --hero-line:rgba(255,255,255,.14); --hero-gold:#F2B84B;
+  --bg:#F6F8F9; --surface:#FFFFFF; --ink:#29252C; --muted:#5A6570; --line:#DCE3E8;
+  --accent:#2A6F8A; --accent-ink:#FFFFFF; --accent-soft:#E4F2F7;
+  --gold:#BF541A; --gold-soft:#FFF0E6; --gold-ink:#7A3510;
+  --hero:#182638; --hero-ink:#F5F8FA; --hero-line:rgba(120,192,215,.22); --hero-gold:#FD8647;
   --display:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
   --body:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --radius:10px;
@@ -11,18 +11,18 @@
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --bg:#0C131B; --surface:#131D28; --ink:#E5EBF1; --muted:#9BA9B8; --line:#243140;
-    --accent:#86B6EC; --accent-ink:#0C131B; --accent-soft:#172737;
-    --gold:#E9B04C; --gold-soft:#2B2313; --gold-ink:#F3D398;
-    --hero:#0F2B4B; --hero-ink:#EEF3F9; --hero-line:rgba(255,255,255,.10); --hero-gold:#F2B84B;
+    --bg:#0F1822; --surface:#16222F; --ink:#ECEFF2; --muted:#9FB0BE; --line:#26384A;
+    --accent:#78C0D7; --accent-ink:#0F1822; --accent-soft:#16303D;
+    --gold:#FD8647; --gold-soft:#2E1E14; --gold-ink:#FFC3A1;
+    --hero:#121D2B; --hero-ink:#F0F4F7; --hero-line:rgba(120,192,215,.16); --hero-gold:#FD8647;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#0C131B; --surface:#131D28; --ink:#E5EBF1; --muted:#9BA9B8; --line:#243140;
-  --accent:#86B6EC; --accent-ink:#0C131B; --accent-soft:#172737;
-  --gold:#E9B04C; --gold-soft:#2B2313; --gold-ink:#F3D398;
-  --hero:#0F2B4B; --hero-ink:#EEF3F9; --hero-line:rgba(255,255,255,.10); --hero-gold:#F2B84B;
+    --bg:#0F1822; --surface:#16222F; --ink:#ECEFF2; --muted:#9FB0BE; --line:#26384A;
+    --accent:#78C0D7; --accent-ink:#0F1822; --accent-soft:#16303D;
+    --gold:#FD8647; --gold-soft:#2E1E14; --gold-ink:#FFC3A1;
+    --hero:#121D2B; --hero-ink:#F0F4F7; --hero-line:rgba(120,192,215,.16); --hero-gold:#FD8647;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
