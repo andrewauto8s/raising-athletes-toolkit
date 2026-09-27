@@ -39,3 +39,22 @@
 })();
 // Keep the current page's tab visible in the phone menu
 (function(){var a=document.querySelector('.sitenav ul a[aria-current="page"]');if(a&&a.parentNode&&a.closest('ul').scrollWidth>a.closest('ul').clientWidth){var ul=a.closest('ul');ul.scrollLeft=a.offsetLeft-ul.offsetLeft-12;}})();
+// Sliding highlight behind the current page tab, and a stronger shadow once scrolled
+(function(){
+  var nav=document.querySelector('.sitenav'); if(!nav) return;
+  var ul=nav.querySelector('ul'), slider=nav.querySelector('.slider'), cur=nav.querySelector('ul a[aria-current="page"]');
+  function place(a){ if(!slider||!a) return; nav.querySelectorAll('ul a').forEach(function(x){x.classList.toggle('on',x===a);}); slider.style.width=a.offsetWidth+'px'; slider.style.transform='translateX('+a.parentNode.offsetLeft+'px)'; }
+  if(slider && cur){
+    place(cur);
+    requestAnimationFrame(function(){ nav.classList.add('ready'); });
+    nav.querySelectorAll('ul a').forEach(function(a){
+      a.addEventListener('mouseenter',function(){ place(a); });
+      a.addEventListener('focus',function(){ place(a); });
+    });
+    ul.addEventListener('mouseleave',function(){ place(cur); });
+    window.addEventListener('resize',function(){ place(cur); });
+    if(ul.scrollWidth>ul.clientWidth) ul.scrollLeft=cur.parentNode.offsetLeft-12;
+  } else { document.documentElement.classList.add('no-slider'); }
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY>8); }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
