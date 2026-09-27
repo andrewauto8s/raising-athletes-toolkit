@@ -37,3 +37,5 @@
     });
   });
 })();
+// Keep the current page's tab visible in the phone menu
+(function(){var a=document.querySelector('.sitenav ul a[aria-current="page"]');if(a&&a.parentNode&&a.closest('ul').scrollWidth>a.closest('ul').clientWidth){var ul=a.closest('ul');ul.scrollLeft=a.offsetLeft-ul.offsetLeft-12;}})();
