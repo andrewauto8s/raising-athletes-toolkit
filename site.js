@@ -58,3 +58,12 @@
   function onScroll(){ nav.classList.toggle('scrolled', window.scrollY>8); }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 })();
+// Back-to-top button for long pages
+(function(){
+  var b=document.createElement('button');b.type='button';b.className='to-top';b.setAttribute('aria-label','Back to top');
+  b.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  b.addEventListener('click',function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});
+  document.body.appendChild(b);
+  function t(){b.classList.toggle('show',window.scrollY>900);}
+  window.addEventListener('scroll',t,{passive:true});t();
+})();

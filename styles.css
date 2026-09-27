@@ -253,3 +253,63 @@ main > *{min-width:0}
   .sitenav ul a{padding:7px 12px;font-size:14px}
   .mobile-nav{top:calc(env(safe-area-inset-top,0px) + 124px)}
 }
+
+/* ---------- Phone layout ---------- */
+.links a{position:relative}
+.to-top{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:46px;height:46px;border-radius:50%;border:1px solid var(--glass-border);
+  background:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:var(--shadow);color:var(--head);
+  display:grid;place-items:center;cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .2s, transform .2s}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+@media (max-width:860px){
+  .sitenav{position:relative}
+  .mobile-nav{top:calc(env(safe-area-inset-top,0px) + 8px);padding:8px 12px}
+  .mobile-nav select{appearance:none;-webkit-appearance:none;padding:12px 40px 12px 16px;border-radius:999px;font-weight:600;color:var(--head);
+    background:rgba(255,255,255,.88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23182638' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 16px center}
+  html{scroll-padding-top:76px}
+}
+@media (max-width:600px){
+  body{font-size:16.5px;line-height:1.55}
+  .sitenav{padding:10px 12px 0}
+  .sitenav .words small{display:none}
+  .sitenav .mark{width:34px;height:34px;font-size:13px}
+  .hero{padding:14px 12px 0}
+  .hero-inner{padding:28px 20px 30px;border-radius:22px;gap:14px}
+  .hero h1{font-size:32px}
+  .hero.small h1{font-size:28px}
+  .hero .lede{font-size:17px}
+  .paths{display:grid;grid-template-columns:1fr;gap:8px}
+  .path{text-align:center;padding:13px 18px}
+  .wrap,.single{padding-inline:12px}
+  main{gap:14px;padding-block:14px 80px}
+  section{padding:22px 16px;border-radius:18px}
+  h2{font-size:23px}
+  h3{font-size:17px}
+  .lead{font-size:17px}
+  .panel{padding:14px 14px}
+  .panel ul{font-size:15.5px;padding-left:1.15em}
+  .trio,.two{gap:10px}
+  .ideas li{padding:12px 12px 12px 48px}
+  .ideas li::before{left:11px;top:11px}
+  .steps li{padding:11px 12px 11px 46px}
+  .steps li::before{left:10px}
+  .links a{display:block;padding:12px 38px 12px 14px}
+  .links a::after{position:absolute;right:14px;top:50%;transform:translateY(-50%)}
+  .links a span{display:block;text-align:left;font-size:14.5px;margin-top:2px}
+  .feed-item{padding:12px 14px}
+  .feed-item a.handle{display:block;margin:0}
+  .right{padding:14px}
+  .faq div{padding:14px}
+  .quote{padding:16px}
+  .quote blockquote{font-size:16px}
+  .copy{width:100%;padding:12px}
+  .btn-row{display:grid;grid-template-columns:1fr}
+  .btn{text-align:center;padding:13px 18px}
+  .org{padding:16px}
+  .join{padding:18px}
+  .pager{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .pager a{padding:12px 14px;font-size:14.5px}
+  footer{padding:0 12px 24px}
+  footer .inner{flex-direction:column;align-items:flex-start;padding:16px 18px;font-size:13.5px}
+  table{font-size:14.5px}
+}
+@media (max-width:860px){body{background-attachment:scroll}}
